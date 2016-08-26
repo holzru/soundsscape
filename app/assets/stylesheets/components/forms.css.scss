@@ -1,0 +1,204 @@
+@import 'colors';
+
+$form-header-height: 30px;
+$form-padding: 25px;
+$form-field-height: 80px;
+
+$form-title-font-size: 36px;
+$form-field-font-size: 20px;
+
+/* MODALS */
+.modal-content {
+  padding: $form-padding;
+}
+
+/* CLOSE BUTTON (X) */
+.modal-content .close {
+  float: right;
+  font-size: $form-header-height;
+  font-weight: 900;
+  height: $form-header-height;
+  line-height: $form-header-height;
+  color: $ss-light-gray;
+  outline: 0;
+}
+
+.modal-content .close:hover {
+  color: $ss-gray;
+}
+
+/* HEADER */
+.modal-content p {
+  float: left;
+  line-height: $form-header-height;
+  font-size: $form-title-font-size;
+  color: $ss-gray;
+}
+
+/* FORMS */
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.form-field input[type="text"], .form-field input[type="password"] {
+  padding: 0 5px;
+}
+
+.modal-content label {
+  line-height: $form-field-height;
+  font-size: $form-field-font-size;
+  color: $ss-gray;
+}
+
+.modal-content input[type="text"], .modal-content input[type="password"] {
+  height: $form-field-height/3;
+  margin: $form-field-height/3 25px;
+  border: 1px solid $ss-light-gray;
+  flex-grow: 1;
+}
+
+.modal-content input[type="submit"] {
+  float: right;
+}
+
+.error-messages {
+  list-style: none;
+  margin: 15px auto;
+  text-align: center;
+  color: red;
+}
+
+.user-form button.btn-success {
+  float: right;
+  margin-left: 15px;
+}
+
+/* TRACK FORM */
+.track-form {
+  padding: 15px 25px;
+}
+
+.my-col-1 {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+.my-col-2 {
+  float: left;
+  width: 66%;
+  text-align: center;
+}
+
+.upload-buttons {
+  display: flex;
+  height: 225px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.track-form button.btn-primary {
+  width: 125px;
+  font-size: 18px;
+  color: white;
+}
+
+.image-upload-thumbnail, .image-upload-placeholder {
+  width: 225px;
+  height: 225px;
+  margin: 0 auto;
+  border: 1px solid $ss-light-gray;
+  text-align: center;
+  color: $ss-light-gray;
+  line-height: 225px;
+}
+
+.track-form audio {
+  margin-top: 15px;
+}
+
+.audio-upload-placeholder {
+  height: 30px;
+  width: 300px;
+  margin: 15px auto;
+  border: 1px solid $ss-light-gray;
+  color: $ss-light-gray;
+  line-height: 30px;
+}
+
+/* CANNOT CONNECT */
+.cannot-connect-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.cannot-connect-form .alert-col-3 {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cannot-connect-form .alert-col-2 {
+  flex-basis: 66.66%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cannot-connect-form .alert-col-1 {
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cannot-connect-form p {
+  margin-left: 20px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.cannot-connect-form i {
+  font-size: 128px;
+  text-align: center;
+  color: #FF8D0A;
+}
+
+.cannot-connect-form button {
+  align-self: flex-end;
+  width: 90px;
+}
+
+.cannot-connect-form ul {
+  list-style: none;
+  float: left;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.cannot-connect-form ul li {
+  height: 80px;
+}
+
+.cannot-connect-form ul li a {
+  display: flex;
+  flex-direction: row;
+  color: blue;
+  height: 80px;
+  line-height: 80px;
+  font-size: 28px;
+}
+
+.cannot-connect-form ul li a img {
+  height: 60px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.cannot-connect-form ul li a:hover {
+  text-decoration: underline;
+}

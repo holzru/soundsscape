@@ -1,0 +1,23 @@
+@import "colors";
+
+.my-navbar {
+  display: block;
+  list-style: none;
+  height: 52px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.my-navbar li {
+  float: left;
+  line-height: 50px;
+  margin: 0 30px;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.my-navbar li.selected {
+  color: $ss-light-orange;
+  border-bottom: 2px solid $ss-light-orange;
+}

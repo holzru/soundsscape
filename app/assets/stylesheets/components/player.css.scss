@@ -1,0 +1,339 @@
+@import 'colors';
+$player-height: 50px;
+$player-bg: $ss-gray;
+.audio-player-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+  min-width: 1100px;
+  height: $player-height;
+  background-color: $player-bg;
+}
+.audio-player-bar audio {
+  display: none;
+}
+.playing-track {
+  flex-basis: 25%;
+  color: white;
+  text-align: center;
+}
+.playing-image {
+  flex-basis: 25%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.playing-image > i {
+  float: left;
+  font-size: 32px;
+  line-height: $player-height;
+  color: $ss-light-gray;
+  cursor: pointer;
+}
+.playing-image > i.disabled:hover {
+  color: $ss-light-gray;
+}
+.playing-image > i.disabled {
+  cursor: default;
+}
+.playing-image > i:hover {
+  color: #fff;
+}
+.retry-button.disabled {
+  cursor: default;
+  color: #a00;
+  background-color: #fff;
+}
+.retry-button.disabled:hover {
+  color: #a00;
+  background-color: #fff;
+}
+.retry-button:hover {
+  color: #ff0000;
+  background-color: $ss-light-gray;
+}
+
+.retry-button-container {
+  padding-top: 10px;
+  height: 100%;
+  width: 70;
+  position: relative;
+}
+
+.retry-button {
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 80%;
+  top: 10%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: serif;
+  line-height: $player-height;
+  background-color: #fff;
+  color: #a00;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.retry-button > i {
+  margin-right: 8px;
+}
+.player-like-button {
+  float: left;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.player-like-button:hover {
+  background-color: $ss-light-gray;
+}
+.player-like-button i {
+  margin-top: 2px;
+  line-height: 40px;
+  font-size: 38px;
+  color: $ss-dark-gray !important;
+}
+.player-like-button i.liked {
+  color: #f39 !important;
+}
+.player-like-button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  line-height: 40px;
+  width: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+.player-like-button .sk-fading-circle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 32px;
+  width: 32px;
+}
+.audio-player-center {
+  flex-basis: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.audio-controls {
+  flex-basis: 100px;
+  float: left;
+  color: $ss-light-gray;
+  font-size: 30px;
+  line-height: $player-height;
+  text-align: center;
+}
+.audio-controls i {
+  line-height: $player-height;
+  cursor: pointer;
+}
+.audio-controls i:hover {
+  color: #fff;
+}
+.audio-controls i.disabled:hover {
+  color: $ss-light-gray;
+}
+.audio-controls i.disabled {
+  cursor: default;
+}
+.audio-progress-bar {
+  flex-grow: 1;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.audio-current-time, .audio-total-time  {
+  flex-basis: 80px;
+  text-align: center;
+  line-height: $player-height;
+  color: $ss-light-gray;
+}
+.progress-bar {
+  flex-grow: 1;
+  height: $player-height;
+  position: relative;
+}
+.progress-bar-bg {
+  background-color: $ss-dark-gray;
+  position: absolute;
+  top: ($player-height - 8px) / 2;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.progress-bar-fg {
+  background-color: $ss-light-orange;
+  position: absolute;
+  top: ($player-height - 8px) / 2;
+  left: 0;
+  width: 0;
+  height: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.progress-bar-head {
+  position: absolute;
+  background-color: $ss-light-orange;
+  border: 1px solid $ss-gray;
+  top: ($player-height - 18px) / 2;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.audio-volume-control {
+  flex-basis: 35px;
+  float: left;
+  position: relative;
+  color: $ss-light-gray;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.audio-volume-control:hover {
+  color: #fff;
+}
+.audio-volume-control i {
+  line-height: $player-height;
+}
+.playing-track {
+  display: flex;
+  position: relative;
+  height: $player-height;
+  align-items: center;
+  color: $ss-light-gray;
+  cursor: pointer;
+}
+.playing-track:hover {
+  color: #fff;
+}
+.playing-track p {
+  flex-grow: 1;
+  padding: 0 10px;
+  font-size: 14px;
+  margin: 0;
+}
+.playing-track i {
+  font-size: 16px;
+}
+.track-queue {
+  position: absolute !important;
+  display: none;
+  bottom: 100% !important;
+  right: 0 !important;
+  max-height: 325px;
+  width: 325px;
+  overflow-y: scroll;
+  background-color: $ss-dark-gray;
+  color: $ss-light-gray;
+  cursor: pointer;
+}
+.track-queue li {
+  text-align: left;
+  height: 50px;
+}
+.track-queue li:hover {
+  background-color: $ss-gray;
+  color: #fff;
+}
+.track-queue li p {
+  float: left;
+  line-height: 50px;
+  font-size: 18px;
+}
+.track-queue li img {
+  margin-top: 5px;
+  float: right;
+  margin-right: 15px;
+}
+.volume-selector {
+  position: absolute;
+  display: none;
+  top: -150px;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  background-color: $ss-dark-gray;
+}
+.volume-rail {
+  margin: 15px 16px;
+  width: 3px;
+  height: 120px;
+  background-color: $ss-light-gray;
+  border-radius: 1.5px;
+}
+.volume-head {
+  margin: 8px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: $ss-light-gray;
+  border: 1px solid $ss-gray;
+  border-radius: 7px;
+}
+.unable-to-load-track {
+  margin: 0 15px;
+  flex-grow: 1;
+  float: left;
+  height: $player-height;
+  text-align: center;
+  font-size: 20px;
+  color: #a00;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.unable-to-load-track i {
+  font-size: 32px;
+}
+/* SQUARE SPINNER */
+.audio-player-spinner {
+  margin: 0 15px;
+  flex-grow: 1;
+  float: left;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.audio-player-spinner > .spinner-el {
+  background-color: $ss-light-orange;
+  height: 100%;
+  width: 2%;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.3) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.3);
+    -webkit-transform: scaleY(0.3);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
